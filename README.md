@@ -1,19 +1,53 @@
-# Create T3 App
+# Tester system
+
+A NextJs fullstack app for educational purposes. 
+
+#### Technologies: ReactJs, PostgreSQL, Prisma, DaisyUI (TailwindCSS), tRPC
+
+# Prerequisites
+
+- PostgreSQL instance
+- Node LTS
+
+# How to run
+
+## 1. Install dependencies
+```
+npm install
+```
+
+## 2. Setup env variables
+
+Edit the `.env` file to set app secrets accordingly. (eg. DATABASE_URL=postgresql://...)
+
+## 3. Migrate the schema to the database instance
+
+Creates tables defined in the `prisma/schema.prisma` on the database. This step has to be done only once in the beginning and everytime the schema file gets udpated.
+
+```
+npm run syncDb
+```
+
+## 4. Run development instance
+
+```
+npm run dev
+```
+
+The website will run on `localhost:3000` by default.
+
+
+# Bootstrapped by
 
 This is an app bootstrapped according to the [init.tips](https://init.tips) stack, also known as the T3-Stack.
 
-## What's next? How do I make an app with this?
+## Tech sources
 
-We try to keep this project as simple as possible, so you can start with the most basic configuration and then move on to more advanced configuration.
-
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
-
-- [Next-Auth.js](https://next-auth.js.org)
 - [Prisma](https://prisma.io)
+- [DaisyUI](https://daisyui.com)
 - [TailwindCSS](https://tailwindcss.com)
 - [tRPC](https://trpc.io)
 
-We also [roll our own docs](https://beta.create.t3.gg) with some summary information and links to the respective documentation.
 
 Also checkout these awesome tutorials on `create-t3-app`.
 
